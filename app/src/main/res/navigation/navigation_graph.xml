@@ -22,9 +22,9 @@
     </fragment>
     <fragment
         android:id="@+id/mewNoteFragment"
-        android:name="ru.com.bulat.notesmvvm.screens.MewNoteFragment"
+        android:name="ru.com.bulat.notesmvvm.screens.AddNewNoteFragment"
         android:label="fragment_mew_note"
-        tools:layout="@layout/fragment_mew_note" >
+        tools:layout="@layout/fragment_add_new_note" >
         <action
             android:id="@+id/action_mewNoteFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
