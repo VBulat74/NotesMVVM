@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'ru.com.bulat.notesmvvm'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "ru.com.bulat.notesmvvm"
@@ -36,22 +36,22 @@ dependencies {
 
     //add navigation component
 
-//    // Java language implementation
-//    implementation "androidx.navigation:navigation-fragment:2.7.0"
-//    implementation "androidx.navigation:navigation-ui:2.7.0"
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:2.7.0"
+    implementation "androidx.navigation:navigation-ui:2.7.0"
 
     // Kotlin
-    implementation "androidx.navigation:navigation-fragment-ktx2.7.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.0"
     implementation "androidx.navigation:navigation-ui-ktx:2.7.0"
 
     // Feature module Support
     implementation "androidx.navigation:navigation-dynamic-features-fragment:2.7.0"
 
-//    // Testing Navigation
-//    androidTestImplementation "androidx.navigation:navigation-testing:2.7.0"
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:2.7.0"
 
-//    // Jetpack Compose Integration
-//    implementation "androidx.navigation:navigation-compose:2.7.0"
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:2.7.0"
 
 
     implementation 'androidx.core:core-ktx:1.10.1'
