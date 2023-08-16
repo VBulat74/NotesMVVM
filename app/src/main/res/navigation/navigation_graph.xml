@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/addNewNoteFragment"
-        android:name="ru.com.bulat.notesmvvm.screens.AddNewNoteFragment"
+        android:name="ru.com.bulat.notesmvvm.screens.add_news_note.AddNewNoteFragment"
         android:label="fragment_add_New_note"
         tools:layout="@layout/fragment_add_new_note">
         <action
