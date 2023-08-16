@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id ("com.google.devtools.ksp")
 }
 
 android {
@@ -40,21 +41,46 @@ dependencies {
     //add navigation component
 
     // Java language implementation
-    implementation "androidx.navigation:navigation-fragment:2.7.0"
-    implementation "androidx.navigation:navigation-ui:2.7.0"
+//    implementation "androidx.navigation:navigation-fragment:2.7.0"
+//    implementation "androidx.navigation:navigation-ui:2.7.0"
 
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:2.7.0"
     implementation "androidx.navigation:navigation-ui-ktx:2.7.0"
 
     // Feature module Support
-    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.7.0"
+    //implementation "androidx.navigation:navigation-dynamic-features-fragment:2.7.0"
 
     // Testing Navigation
-    androidTestImplementation "androidx.navigation:navigation-testing:2.7.0"
+    //androidTestImplementation "androidx.navigation:navigation-testing:2.7.0"
 
     // Jetpack Compose Integration
-    implementation "androidx.navigation:navigation-compose:2.7.0"
+    //implementation "androidx.navigation:navigation-compose:2.7.0"
+
+    //add ROOM
+
+    implementation "androidx.room:room-runtime:2.5.2"
+    annotationProcessor "androidx.room:room-compiler:2.5.2"
+
+    // To use Kotlin annotation processing tool (kapt)
+    //kapt "androidx.room:room-compiler:2.5.2"
+    // To use Kotlin Symbol Processing (KSP)
+    ksp "androidx.room:room-compiler:2.5.2"
+
+    // optional - RxJava2 support for Room
+    //implementation "androidx.room:room-rxjava2:2.5.2"
+
+    // optional - RxJava3 support for Room
+    //implementation "androidx.room:room-rxjava3:2.5.2"
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    //implementation "androidx.room:room-guava:2.5.2"
+
+    // optional - Test helpers
+    //testImplementation "androidx.room:room-testing:2.5.2"
+
+    // optional - Paging 3 Integration
+    //implementation "androidx.room:room-paging:2.5.2"
 
 
     implementation 'androidx.core:core-ktx:1.10.1'
