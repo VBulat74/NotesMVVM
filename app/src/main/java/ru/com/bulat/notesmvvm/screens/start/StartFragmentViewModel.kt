@@ -2,8 +2,11 @@ package ru.com.bulat.notesmvvm.screens.start
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import ru.com.bulat.notesmvvm.database.firebase.AppFirebaseRepository
 import ru.com.bulat.notesmvvm.database.room.AppRoomDatabase
 import ru.com.bulat.notesmvvm.database.room.AppRoomRepository
+import ru.com.bulat.notesmvvm.utilits.EMAIL
+import ru.com.bulat.notesmvvm.utilits.PASSWORD
 import ru.com.bulat.notesmvvm.utilits.REPOSITORY
 import ru.com.bulat.notesmvvm.utilits.TYPE_FIREBASE
 import ru.com.bulat.notesmvvm.utilits.TYPE_ROOM
@@ -23,7 +26,12 @@ class StartFragmentViewModel (application: Application) : AndroidViewModel(appli
                 onSuccess()
             }
             TYPE_FIREBASE -> {
-                showToast(TYPE_FIREBASE)
+                REPOSITORY = AppFirebaseRepository()
+                REPOSITORY.connectToDatabase({
+                    onSuccess()
+                                             },{
+                    showToast(it)
+                                             })
             }
         }
     }
