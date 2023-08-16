@@ -9,7 +9,11 @@ import androidx.lifecycle.ViewModelProvider
 import ru.com.bulat.notesmvvm.R
 import ru.com.bulat.notesmvvm.databinding.FragmentStartBinding
 import ru.com.bulat.notesmvvm.utilits.APP_ACTIVITY
+import ru.com.bulat.notesmvvm.utilits.EMAIL
+import ru.com.bulat.notesmvvm.utilits.PASSWORD
+import ru.com.bulat.notesmvvm.utilits.TYPE_FIREBASE
 import ru.com.bulat.notesmvvm.utilits.TYPE_ROOM
+import ru.com.bulat.notesmvvm.utilits.showToast
 
 
 class StartFragment : Fragment() {
@@ -38,6 +42,25 @@ class StartFragment : Fragment() {
         mBinding.btnRoom.setOnClickListener {
             mViewModel.initDataBase(TYPE_ROOM){
                 APP_ACTIVITY.navController.navigate(R.id.action_startFragment_to_mainFragment)
+            }
+        }
+        mBinding.btnFirebase.setOnClickListener {
+            mBinding.inputEmail.visibility = View.VISIBLE
+            mBinding.inputPassword.visibility = View.VISIBLE
+            mBinding.btnLogin.visibility = View.VISIBLE
+            mBinding.btnLogin.setOnClickListener {
+                val input_email = mBinding.inputEmail.text.toString()
+                val input_password = mBinding.inputEmail.text.toString()
+
+                if (input_email.isNotEmpty() && input_password.isNotEmpty()) {
+                    EMAIL = input_email
+                    PASSWORD = input_password
+                    mViewModel.initDataBase(TYPE_FIREBASE){
+                        APP_ACTIVITY.navController.navigate(R.id.action_startFragment_to_mainFragment)
+                    }
+                } else {
+                    showToast(getString(R.string.enter_login_and_password))
+                }
             }
         }
     }

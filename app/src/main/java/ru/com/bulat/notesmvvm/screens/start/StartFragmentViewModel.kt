@@ -5,7 +5,9 @@ import androidx.lifecycle.AndroidViewModel
 import ru.com.bulat.notesmvvm.database.room.AppRoomDatabase
 import ru.com.bulat.notesmvvm.database.room.AppRoomRepository
 import ru.com.bulat.notesmvvm.utilits.REPOSITORY
+import ru.com.bulat.notesmvvm.utilits.TYPE_FIREBASE
 import ru.com.bulat.notesmvvm.utilits.TYPE_ROOM
+import ru.com.bulat.notesmvvm.utilits.showToast
 
 class StartFragmentViewModel (application: Application) : AndroidViewModel(application) {
 
@@ -19,6 +21,9 @@ class StartFragmentViewModel (application: Application) : AndroidViewModel(appli
                     .getAppRoomDao()
                 REPOSITORY = AppRoomRepository(dao)
                 onSuccess()
+            }
+            TYPE_FIREBASE -> {
+                showToast(TYPE_FIREBASE)
             }
         }
     }
