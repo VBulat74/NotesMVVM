@@ -6,14 +6,12 @@ import ru.com.bulat.notesmvvm.database.DatabaseRepository
 import ru.com.bulat.notesmvvm.model.AppNote
 import ru.com.bulat.notesmvvm.utilits.EMAIL
 import ru.com.bulat.notesmvvm.utilits.PASSWORD
-import ru.com.bulat.notesmvvm.utilits.showToast
 
 class AppFirebaseRepository : DatabaseRepository {
 
     private val mAuth = FirebaseAuth.getInstance()
 
-    override val allNotes: LiveData<List<AppNote>>
-        get() = TODO("Not yet implemented")
+    override val allNotes: LiveData<List<AppNote>> = AllNotesLiveData()
 
     override suspend fun insert(note: AppNote, onSuccess: () -> Unit) {
         TODO("Not yet implemented")
