@@ -10,6 +10,7 @@ import ru.com.bulat.notesmvvm.utilits.REPOSITORY
 
 class AddNewNoteFragmentViewModel (application: Application) : AndroidViewModel(application) {
     fun insert(note : AppNote, onSuccess : () -> Unit) = viewModelScope.launch (Dispatchers.IO) {
+        //
         REPOSITORY.insert(note) {
             viewModelScope.launch(Dispatchers.Main) { onSuccess() }
         }
