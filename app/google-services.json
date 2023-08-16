@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "504858735250",
+    "firebase_url": "https://notes-c207a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "notes-c207a",
+    "storage_bucket": "notes-c207a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504858735250:android:68a9c1460fb7482ed62c4b",
+        "android_client_info": {
+          "package_name": "ru.com.bulat.notesmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504858735250-hcf0fkf7v09ijapd1u9slf9b3od8gaq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdDqeJ8ERr96fEsfbY09QjUnwHlEJqQqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504858735250-hcf0fkf7v09ijapd1u9slf9b3od8gaq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

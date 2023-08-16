@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id ("com.google.devtools.ksp")
+    id ("com.google.gms.google-services")
 }
 
 android {
@@ -83,6 +84,13 @@ dependencies {
 
     // optional - Paging 3 Integration
     //implementation "androidx.room:room-paging:2.5.2"
+
+    //add FireBase
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
 
 
     implementation 'androidx.core:core-ktx:1.10.1'
