@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import ru.com.bulat.notesmvvm.R
 import ru.com.bulat.notesmvvm.R.*
 import ru.com.bulat.notesmvvm.databinding.FragmentAddNewNoteBinding
@@ -51,7 +48,7 @@ class AddNewNoteFragment : Fragment() {
                     text = text,
                 )
                 mViewModel.insert(note){
-                     APP_ACTIVITY.mNavController.navigate(R.id.action_add_newNoteFragment_to_mainFragment)
+                     APP_ACTIVITY.navController.navigate(R.id.action_add_newNoteFragment_to_mainFragment)
                 }
             }
         }

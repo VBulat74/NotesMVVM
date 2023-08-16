@@ -23,6 +23,18 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
         return MainHolder(view)
     }
 
+    override fun onViewAttachedToWindow(holder: MainHolder) {
+        holder.itemView.setOnClickListener {
+            MainFragment.click(mListNotes[holder.adapterPosition])
+        }
+        super.onViewAttachedToWindow(holder)
+    }
+
+    override fun onViewDetachedFromWindow(holder: MainHolder) {
+        holder.itemView.setOnClickListener(null)
+        super.onViewDetachedFromWindow(holder)
+    }
+
     override fun getItemCount(): Int = mListNotes.size
 
     override fun onBindViewHolder(holder: MainHolder, position: Int) {
