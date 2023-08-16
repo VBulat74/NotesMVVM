@@ -14,11 +14,11 @@ class AppFirebaseRepository : DatabaseRepository {
     override val allNotes: LiveData<List<AppNote>> = AllNotesLiveData()
 
     override suspend fun insert(note: AppNote, onSuccess: () -> Unit) {
-        TODO("Not yet implemented")
+
     }
 
     override suspend fun delete(note: AppNote, onSuccess: () -> Unit) {
-        TODO("Not yet implemented")
+
     }
 
     override fun connectToDatabase(onSuccess: () -> Unit, onFail: (String) -> Unit) {
