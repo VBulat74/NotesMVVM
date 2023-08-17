@@ -6,4 +6,8 @@ import ru.com.bulat.notesmvvm.utilits.REPOSITORY
 
 class MainFragmentViewModel(application: Application) : AndroidViewModel(application) {
     val allNotes = REPOSITORY.allNotes
+
+    fun signOut() {
+        REPOSITORY.signOut()
+    }
 }
